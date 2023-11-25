@@ -8,11 +8,12 @@ pub fn main() !void {
 
     // check if file is not null
     if (open_file) |file| {
-        // multiline string
         defer file.close();
+
+        // multiline string
         const message =
             \\Hello File!
-            \\BASED
+            \\zig is BASED
         ;
 
         // write to the file
